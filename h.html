@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <style>
+              body{
+                margin:auto;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                background-color: rgb(54, 54, 170);
+                font-family: Georgia;
+              }
+              .parent{
+                padding-left: 10px;
+                padding-right:5px; 
+                background-color: aliceblue;         
+                width:300px;
+                border-style: solid;
+                border-color: aliceblue;
+                border-radius:15px;
+              }
+            .para{
+                margin-left:40px;
+                
+                font-size:25px;
+             }
+             #num1,#num2{
+                width:150px;
+                height:25px;
+             }
+             #result{
+                margin-top:15px;
+                margin-bottom:0;
+                width:220px;
+             }
+             #math{
+                margin-left:5px;   
+                height:25px;
+                border-radius:15px;
+                border-style:solid;
+                border-color:rgb(69, 90, 108);
+                 
+            }
+            #reset{
+                margin-left:100px;
+                border-radius:15px;
+                height:25px;
+                width:65px;
+                border-style:solid;
+                border-color:rgb(52, 104, 147);
+                font-size:16px;
+            }
+            .first{
+                margin-right:15px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+       
+        <div class="parent">
+            <p class="para"> Simple Calculator</p>
+        <form name="calculator" >
+            
+            <label for="num1" class="first"> First Number: </label> 
+            <input type="text" name="num1" id="num1"><br> <br>
+            <label for="num2"> Second  Number: </label> 
+            <input type="text" name="num2" id="num2"><br> <br>
+            
+            
+            <input type="button" id="math" value="Add" onclick="sum()">
+            <input type="button" id="math" value="Substract" onclick="diff()">
+            <input type="button" id="math" value="Product" onclick="prod()">
+            <input type="button" id="math"value="Division" onclick="div()">
+            <br>
+            <label for="result"> Result: </label>
+            <input type="text" name="result" id="result" readonly><br> <br>
+            <input type="reset" id="reset" value="Reset">
+        </form>
+    </div>
+        <script>
+            function sum()
+            {
+                var a = document.calculator.num1.value;
+                var b = document.calculator.num2.value;
+                var s = parseInt(a) + parseInt(b);
+               
+                result.value=s;
+            }
+            function diff()
+            {
+                var a = document.calculator.num1.value;
+                var b = document.calculator.num2.value;
+                var s = parseInt(a) - parseInt(b);
+                
+                result.value=s;
+            }
+            function prod()
+            {
+                var a = document.calculator.num1.value;
+                var b = document.calculator.num2.value;
+                var s = parseInt(a) * parseInt(b);
+                
+                result.value=s;
+            }
+            
+            function div()
+            {
+                var a = document.calculator.num1.value;
+                var b = document.calculator.num2.value;
+                var s = parseInt(a) / parseInt(b);
+                
+                result.value=s;
+            }
+            
+        </script>
+       
+    </body>
+
+</html>
